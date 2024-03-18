@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppVTC.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppVTC"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:pages="clr-namespace:MauiAppVTC.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiAppVTC">
+   
+    <ShellContent
+        Title=""
+        Shell.FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate pages:LoadingPage}"
+        Route="LoadingPage" />
+    <FlyoutItem  Title="Request a ride">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Map}" Color="Black" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            ContentTemplate="{DataTemplate pages:MainPage}"
+            Route="MainPage" >
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem  Title="List of trips">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Road}" Color="Black" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            
+            ContentTemplate="{DataTemplate pages:TripListing}"
+            Route="TripListing" >
+        </ShellContent>
+    </FlyoutItem>
+    
+    <ShellContent
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        Title="Login"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" />
+    <ShellContent
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        Title="Otp verification"
+        ContentTemplate="{DataTemplate pages:CodeValidationPage}"
+        Route="CodeValidationPage" />
+    <ShellContent
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        Title="Sign Up"
+        ContentTemplate="{DataTemplate pages:SignUpPage}"
+        Route="SignUpPage" />
+
+</Shell>

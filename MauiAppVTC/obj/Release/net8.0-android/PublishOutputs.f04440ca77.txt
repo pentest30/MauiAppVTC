@@ -1,0 +1,4 @@
+C:\Users\i.baouche\RiderProjects\MauiAppVTC\MauiAppVTC\bin\Release\net8.0-android\publish\mauiappvtc.mauiappvtc-Signed.aab
+C:\Users\i.baouche\RiderProjects\MauiAppVTC\MauiAppVTC\bin\Release\net8.0-android\publish\mauiappvtc.mauiappvtc.aab
+C:\Users\i.baouche\RiderProjects\MauiAppVTC\MauiAppVTC\bin\Release\net8.0-android\publish\mauiappvtc.mauiappvtc-Signed.apk
+C:\Users\i.baouche\RiderProjects\MauiAppVTC\MauiAppVTC\bin\Release\net8.0-android\publish\_Microsoft.Android.Resource.Designer.dll

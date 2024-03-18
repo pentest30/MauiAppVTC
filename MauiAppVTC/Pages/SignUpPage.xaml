@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppVTC.Pages.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutItemIsVisible="False"
+             xmlns:local="clr-namespace:MauiAppVTC.ViewModels"
+             Title="Sign Up"
+             >
+    <StackLayout Padding="20">
+    <!-- Title Label with Enhanced Styling -->
+    <Label Text="Registration" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#32CD32" Margin="0,10"/>
+
+    <!-- First Name Entry -->
+    <Entry x:Name="firstNameEntry" Text="{Binding FirstName, Mode=TwoWay}" Placeholder="First Name" BackgroundColor="White" TextColor="Black" Margin="0,10" FontSize="16"/>
+
+    <!-- Last Name Entry -->
+    <Entry x:Name="lastNameEntry" Text="{Binding LastName, Mode=TwoWay}" Placeholder="Last Name" BackgroundColor="White" TextColor="Black" Margin="0,10" FontSize="16"/>
+
+    <!-- Email Entry -->
+    <Entry x:Name="emailEntry" Text="{Binding Email, Mode=TwoWay}" Placeholder="Email" Keyboard="Email" BackgroundColor="White" TextColor="Black" Margin="0,10" FontSize="16"/>
+
+    <!-- Country Code and Phone Number Grid -->
+    <Grid Margin="0,0,0,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Country Code Picker -->
+        <Picker x:Name="countryCodePicker" SelectedItem="{Binding CountryCode, Mode=TwoWay}" Title="Country Code" Grid.Column="0" FontSize="16">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>+1</x:String>
+                    <x:String>+44</x:String>
+                    <x:String>+91</x:String>
+                    <x:String>+213</x:String>
+                    <!-- Add more country codes here -->
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Phone Number Entry -->
+        <Entry x:Name="phoneNumberEntry" Text="{Binding Phone, Mode=TwoWay}" Placeholder="Phone Number" Keyboard="Telephone" Grid.Column="1" BackgroundColor="White" TextColor="Black" Margin="10,0,0,0" FontSize="16"/>
+    </Grid>
+
+    <!-- Sign Up Button with Enhanced Styling -->
+    <Button x:Name="signUpButton" Command="{Binding Path=SubmitCommand}" Text="Sign Up" BackgroundColor="#32CD32" TextColor="White" CornerRadius="20" FontSize="18" FontAttributes="Bold" Margin="0,10"/>
+    <Label Text="Return to sign in."
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextDecorations="Underline">
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnSignInTapped"/>
+        </Label.GestureRecognizers>
+    </Label>
+    </StackLayout>
+
+</ContentPage>

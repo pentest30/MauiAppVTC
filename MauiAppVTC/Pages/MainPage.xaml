@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            xmlns:mapsui="clr-namespace:Mapsui.UI.Maui;assembly=Mapsui.UI.Maui"
+                            xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"   x:Class="MauiAppVTC.Pages.MainPage"
+                            xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+                            Shell.NavBarIsVisible="True"
+                            Shell.BackgroundColor="#4CAF50">
+   <StackLayout Padding="0" Spacing="20">
+       <mapsui:MapView x:Name="mapView"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="Fill">
+        
+       </mapsui:MapView>
+   </StackLayout>
+    <uranium:UraniumContentPage.Attachments>
+        <material:BottomSheetView IsInPlatformLayout="False" BackgroundColor="{DynamicResource  White}">
+                <StackLayout>
+                    <Entry x:Name="departureEntry"
+                           Placeholder="From"
+                           FontSize="Small"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"
+                           Text="{Binding CurrentAddress, Mode=TwoWay}"
+                           Margin="20,0,20,0"
+                           FontAttributes="Bold"/>
+
+                    <Entry x:Name="destinationEntry"
+                           Placeholder="To"
+                           FontSize="Small"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"
+                           Text="{Binding DestAddress, Mode=TwoWay}"
+                           Margin="20,0,20,0"
+                           FontAttributes="Bold"/>
+
+                    <!-- Additional options like fare and comments -->
+                    <Entry x:Name="costEntry"
+                           Placeholder="Estimated cost"
+                           FontSize="Small"
+                           IsEnabled="False"
+                           VerticalOptions="Center"
+                           Text="{Binding Cost, Mode=TwoWay}"
+                           HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,5"
+                           FontAttributes="Bold"/>
+
+                    <Entry x:Name="fareEntry"
+                           Placeholder="Offer your fare"
+                           Keyboard="Numeric"
+                           FontSize="Small"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,5"
+                           FontAttributes="Bold"/>
+            
+                    <Button 
+                        Text="Ride request"
+                        StyleClass="FilledButton"
+                        BackgroundColor="#4CAF50"
+                        Margin="20,0,20,20"
+                        HeightRequest="50"
+                        FontAttributes="Bold"
+                        Command="{Binding RideRequestCommand}" >
+         
+                    </Button>
+                </StackLayout>
+        </material:BottomSheetView>
+    </uranium:UraniumContentPage.Attachments>
+   </uranium:UraniumContentPage>

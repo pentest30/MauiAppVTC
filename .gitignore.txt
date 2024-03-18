@@ -1,0 +1,130 @@
+## JetBrains Rider
+.idea/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# User-specific files
+*.rsuser
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Output of the build script
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.webarchive
+*.swp
+*.userprefs
+*.csproj.user
+*.vbproj.user
+*.nupkg
+*.nuget.props
+*.nuget.targets
+packages/
+
+# ReSharper
+_ReSharper*/
+*ReSharper*/
+*.DotSettings.user
+
+# User-specific files
+.vs/
+.vscode/
+*.swp
+*.*~
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# MSTest test Results
+[TestResults]/
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an MSBuild Project
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.coreproj
+*.props
+*.targets
+*.json
+*.tlog
+*.log
+*.vspscc
+*.vssscc
+*.vssettings
+*.pidb
+*.svclog
+*.scc
+
+# Tye
+.tye/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Rider
+.idea/
+
+# User-specific stuff
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows Stuff
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/

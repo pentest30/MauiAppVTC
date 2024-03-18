@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppVTC.Pages.LoginPage"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+
+             Shell.FlyoutBehavior="Disabled"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False">
+    <Grid Padding="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Label -->
+        <Label Text="Login" 
+               FontSize="30" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" 
+               TextColor="#32CD32" 
+               Margin="0,10"/>
+
+        <!-- Centered Login Details -->
+        <VerticalStackLayout Grid.Row="1" 
+                             Spacing="5" 
+                             VerticalOptions="Center" 
+                             HorizontalOptions="Fill">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Country Code Picker -->
+                <Picker x:Name="countryCodePicker" 
+                        SelectedItem="{Binding CountryCode, Mode=TwoWay}" 
+                        Title="Country Code" 
+                        Grid.Column="0" 
+                        FontSize="16">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>+1</x:String>
+                            <x:String>+44</x:String>
+                            <x:String>+91</x:String>
+                            <x:String>+213</x:String>
+                            <!-- Add more country codes here -->
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Phone Number Entry -->
+                <material:TextField x:Name="phoneNumberEntry" 
+                       Text="{Binding Phone, Mode=TwoWay}" 
+                       Keyboard="Telephone" 
+                       Grid.Column="1" 
+                       Margin="10,0,0,0" 
+                       FontSize="16"/>
+            </Grid>
+            <Button Text="Log In"
+                    Command="{Binding SubmitCommand}" 
+                    Margin="0,10"
+                    BackgroundColor="#32CD32"/>
+
+            <Label Text="Don't have an account? Sign up here."
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToSignUpCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
